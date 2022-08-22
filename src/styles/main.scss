@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+    padding: 0 10px;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed;
+    .icon{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        right: 0;
+        .button{
+           padding: 10px; 
+        }
+    }
+}
