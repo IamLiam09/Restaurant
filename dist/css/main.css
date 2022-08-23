@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("..image/wake.svg");
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 0;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  top: 2%;
+  -webkit-transform: translate(2%, -50%);
+          transform: translate(2%, -50%);
+  max-width: 95%;
+  width: 95%;
+  height: 40px;
+  background-color: hsl(0deg, 0%, 68%);
+}
+header .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  right: 1%;
+}
+header .icon .button {
+  padding: 10px;
+}
