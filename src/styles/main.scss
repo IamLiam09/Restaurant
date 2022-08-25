@@ -27,19 +27,56 @@ body{
             right: 1%;
             .button{
                padding: 10px; 
-            //    background-color: black;
             }
         }
     }
     .plate{
         display: flex;
-        width: 200px;
-        height: 200px;
-        border-radius: 50px;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 10%;
+        top: 4%;
+        overflow: hidden;
+        z-index: -1;
+        width: 550px;
+        height: 550px;
+        border-radius: 50%;
         border: 1px solid black;
-        background-color: black;
+        // background-color: black;
         &__image{
-            position: relative
+            position: relative;
+            height: 100%;
         }
+    }
+    .wording{
+        width: 300px;
+        height: 300px;
+        display: grid;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.8fr;
+        position: absolute;
+        padding: 5px;
+        top: 25%;
+        left: 10%;
+        transform: tranlate(0, -50%);
+        &__african{
+            color: green;
+        }
+        &__booknow{
+            border-radius: 15px;
+            height: 35px;
+        }
+    }
+    .socials{
+        width: 50px;
+        height: 200px;
+        display: grid;
+        position: absolute;
+        right: 0;
+        top: 35%;
+        transform: tranlate(0, -50%);
+        background-color: black;
+        grid-template-rows: auto;
+        border-radius: 25px 0 0 25px;
     }
 }
