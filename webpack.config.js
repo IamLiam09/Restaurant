@@ -1,11 +1,14 @@
 const path = require("path");
-// const HtmlWebpackPlugin = require("html-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 module.exports = {
     mode: "development",
-	entry: "./src/index.js",
+	entry: {
+		bundle: path.resolve(__dirname, "src/index.js"),
+	},
 	output: {
-		filename: "main.js",
 		path: path.resolve(__dirname, "dist"),
+		filename: "[name].js",
+		assetModuleFilename: '[name][ext]'
 	},
 	devServer: {
 		static: {
@@ -22,7 +25,39 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				use: ["style-loader", "css-loader", "sass-loader"]
-			}
-		]
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-inline-loader'
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			},
+			{
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
+				use: [{
+					loader: "file-loader",
+					options: {
+						name: "[name].[ext]",
+						outputPath: "img", 
+					}
+				}]
+			},
+		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Restaurant",
+			filename: "index.html",
+			template: "src/template.html",
+		}),
+	],
 };
