@@ -4,6 +4,7 @@ module.exports = {
     mode: "development",
 	entry: {
 		bundle: path.resolve(__dirname, "src/index.js"),
+
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -43,9 +44,14 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: "Restaurant",
 			filename: "index.html",
-			template: "src/template.html",
+			title: "Restaurant",
+			template: "./src/template.html",
 		}),
-	],
+		new HtmlWebpackPlugin({
+			filename: "catalog.html",
+			title: "Catalog",
+			template: "./src/template2.html",
+		}),
+	]
 };

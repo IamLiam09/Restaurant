@@ -31,6 +31,10 @@ body{
             justify-content: space-between;
             position: absolute;
             right: 1%;
+            a{
+                text-decoration: none;
+                color: black;
+            }
             .button{
                padding: 10px; 
             }
