@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+$main-size: 4rem;
+$main: 16px;
+$fam: 'Poppins', sans-serif;
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +12,7 @@ body{
     padding-top: 0;
     padding-right: 10px;
     padding-left: 10px;
+    font-size: $main;
 }
 #content{
     header{
@@ -35,48 +40,74 @@ body{
         justify-content: center;
         align-items: center;
         position: absolute;
-        right: 10%;
+        right: 15%;
         top: 4%;
         overflow: hidden;
         z-index: -1;
         width: 550px;
         height: 550px;
         border-radius: 50%;
-        border: 1px solid black;
+        border: 1px solid #FFC440;
         // background-color: black;
         &__image{
             position: relative;
-            height: 100%;
+            right: 15%;
+            height: 80%;
         }
     }
     .wording{
-        width: 300px;
+        width: 500px;
         height: 300px;
         display: grid;
         grid-template-rows: 0.1fr 0.1fr 0.1fr 0.8fr;
         position: absolute;
         padding: 5px;
         top: 25%;
-        left: 10%;
+        font-family: $fam;
+        left: 7%;
         transform: tranlate(0, -50%);
+        &__word{
+            font-size: $main-size;
+        }
         &__african{
             color: green;
+            font-size: $main-size;
+        }
+        &__list{
+            font-size: $main;
         }
         &__booknow{
             border-radius: 15px;
-            height: 35px;
+            height: 45px;
+            width: 60%;
+            margin-top: 4px;
+            color: white;
+            background-color: #FFC440;
+            font-size: $main;
+            border: none;
         }
+    }
+    .bg{
+        position: absolute;
+        right: 0;
+        top: 2%;
+        z-index: -4;
     }
     .socials{
         width: 50px;
         height: 200px;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: absolute;
+        padding: 2px;
+        font-size: 30px;
+        gap: 30px;
         right: 0;
         top: 35%;
         transform: tranlate(0, -50%);
-        background-color: black;
-        grid-template-rows: auto;
+        background-color: white;
         border-radius: 25px 0 0 25px;
     }
 }
