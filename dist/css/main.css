@@ -43,6 +43,31 @@ body {
 #content header .icon .button {
   padding: 10px;
 }
+#content .ziglines__1 {
+  width: 10%;
+}
+#content .ziglines img {
+  position: absolute;
+  top: 50%;
+}
+#content .ziglines .circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+}
+#content .ziglines .circle2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 6px solid black;
+  position: absolute;
+  bottom: 0%;
+  left: 10%;
+}
 #content .plate {
   display: -webkit-box;
   display: -ms-flexbox;
