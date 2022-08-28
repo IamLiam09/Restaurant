@@ -2,7 +2,8 @@ $main-size: 4rem;
 $main: 16px;
 $primary-color: #FFC440;
 $fam: 'Poppins', sans-serif;
-*{
+html, *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
