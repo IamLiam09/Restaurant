@@ -6,14 +6,14 @@ import pie from "./assets/catalogimg/pie.png";
 import egusi from "./assets/catalogimg/egusi.png";
 import  uglyplantain from "./assets/catalogimg/uglyplantain.png";
 import jollofrice from "./assets/catalogimg/fried_rice_chicken.png";
-import cupcake from "./assets/catalogimg/yellow_cupcake.png"
 import popular from "./assets/catalogimg/clean_fried_rice.png"
 import comp from "./assets/catalogimg/about_comp.png"
 import chocolatecupcake from "./assets/catalogimg/chocolate_cupcake.png"
 import chickenslect from "./assets/chicken.png"
 import drink from "./assets/catalogimg/drink.png"
 import review from "./assets/catalogimg/review_cust.png"
-
+import complete_rice from "./assets/catalogimg/complete_rice.png"
+import createdzig from "./assets/catalogimg/createdzig.png"
 const Barque_fish = document.getElementById("barbeque-fish")
 const burgerid = document.getElementById("burger")
 const  pieid = document.getElementById("pie")
@@ -29,6 +29,12 @@ const foreignid = document.getElementById("foreign")
 const drinksid = document.getElementById("drinks")
 const localid = document.getElementById("local")
 const reviewid = document.getElementById("reviewimg")
+const createdzigid = document.getElementById("createdzig")
+const createdzigid1 = document.getElementById("createdzig1")
+const createdzigid2 = document.getElementById("createdzig2")
+const createdzigid3 = document.getElementById("createdzig3")
+const createdzigid4 = document.getElementById("createdzig4")
+const createdzigid5 = document.getElementById("createdzig5")
 Barque_fish.src = fish
 burgerid.src = burger
 pieid.src = pie
@@ -36,7 +42,7 @@ chickenid.src = chickencat
 plaintainid.src = uglyplantain
 jollof_riceid.src = jollofrice
 egusiid.src = egusi
-cupcakeid.src = cupcake
+cupcakeid.src = complete_rice
 popularid.src = popular
 compid.src = comp
 pasteriesid.src = chocolatecupcake
@@ -44,3 +50,9 @@ foreignid.src = chickencat
 drinksid.src = drink
 localid.src = egusi
 reviewid.src = review
+createdzigid.src = createdzig
+createdzigid1.src = createdzig
+createdzigid2.src = createdzig
+createdzigid3.src = createdzig
+createdzigid4.src = createdzig
+createdzigid5.src = createdzig

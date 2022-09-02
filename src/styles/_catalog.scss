@@ -78,10 +78,13 @@
         grid-template-rows: 1fr 0.1fr 0.1fr 0.9fr;
         border-radius: 10px;
         text-align: left;
+        .star{
+            padding-left: 5px;
+        }
         .fa-star{
-            align-self: flex-start;
             color: $primary-color;
-            padding-bottom: 50px;
+            padding-bottom: 30px;
+            justify-items: start;
         }
         h4{
             padding: 5px;
@@ -109,6 +112,14 @@
         grid-template-rows: 1fr 0.1fr 0.8fr 0.1fr;
         border-radius: 10px;
         text-align: left;
+        .star{
+            padding-left: 5px;
+        }
+        .fa-star{
+            color: $primary-color;
+            padding-bottom: 30px;
+            justify-items: start;
+        }
         h4{
             padding: 5px;
         }
@@ -130,6 +141,23 @@
             .__imgcont{
                 height: 80%;
                 width: 75%;
+                .createdzig{
+                    width: 30%;
+                    height: 30%;
+                    position: absolute;
+                    top: -7%;
+                    left: 20%;
+                    transform: rotate(30deg);
+                }
+                .createdzig:nth-child(2){
+                    width: 30%;
+                    height: 30%;
+                    position: absolute;
+                    z-index: 2;
+                    top: -8%;
+                    left: -8%;
+                    transform: rotate(350deg);
+                }
                 .circle2{
                     width: 30px;
                     height: 30px;
@@ -165,6 +193,16 @@
                 gap: 10px;
                 width: 70%;
                 margin-bottom: 40%;
+                .createdzig{
+                    width: 30%;
+                    height: 30%;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0%;
+                    right: -8%;
+                    transform: rotate(120deg);
+                }
+
                 p{
                     font-size: .8rem;
                 }
@@ -196,6 +234,30 @@
             .__imgcont{
                 height: 140%;
                 width: 80%;
+                #createdzig3{
+                    width: 30%;
+                    height: 30%;
+                    position: absolute;
+                    top: 14%;
+                    right: 65%;
+                    transform: rotate(30deg);
+                }
+                #createdzig4{
+                    width: 30%;
+                    height: 30%;
+                    position: absolute;
+                    top: -34%;
+                    right: 25%;
+                    transform: rotate(30deg);
+                }
+                #createdzig5{
+                    width: 20%;
+                    height: 20%;
+                    position: absolute;
+                    top: 85%;
+                    left: 20%;
+                    transform: rotate(0deg);
+                }
                 .circle{
                     width: 30px;
                     height: 30px;
@@ -286,6 +348,7 @@
                 position: relative;
                 z-index: -1;
                 border-radius: 1px 50px 0px 50px;
+               
                 img{
                     width: 100%;
                     height: 100%;
@@ -299,8 +362,12 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-left: -55px;
+                margin-left: -30px;
                 padding: 0 10px;
+                .fa-star{
+                    color: $primary-color;
+                    justify-items: start;
+                }
                 p{
                     font-size: .8rem;
                 }
