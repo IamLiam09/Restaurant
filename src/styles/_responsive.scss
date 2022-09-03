@@ -1,0 +1,47 @@
+@include media-tab{
+    html{
+        font-size: .8rem;
+    }
+    body{
+        overflow: hidden;
+    }
+    content{
+        position: relative;
+        height: 100vh;
+    }
+    .bg__image{
+        display: none;
+    }
+    .plate{
+        position: absolute;
+        top: 50%;
+        left: 36%;
+        transform: translate(0, 50%);
+        &__image{
+            position: relative;
+            bottom: -4%;
+            right: 0%;
+        }
+    }
+    .wording{
+        top: 20%;
+        transform: translate(0, -25%);
+        z-index: 3;
+    }
+    .socials{
+        color: $primary-color
+    }
+}
+@include media-phone{
+    html{
+        font-size: .7rem;
+    }
+    .socials{
+       display: none !important;
+    }
+}
+@include media-large{
+    header{
+
+    }
+}

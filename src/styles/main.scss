@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import "./config";
 @import "./catalog";
+@import "./responsive";
+@import "./icon";
 body{
     background: white;
     font-size: $main;
-    height: 95vh;
 }
 #content{
-    padding-right: 10px;
-    padding-left: 10px;
     height: 95vh;
+    max-width: 1200px;
+    margin: 0 auto;
     #bgimage{
         object-fit: contain;
         position: absolute;
@@ -25,16 +26,15 @@ body{
         display: flex;
         justify-content: space-between;
         position: fixed;
-        top: 2%;
         z-index: 3;
-        transform: translate(2%, -50%);
+        left: 0;
         max-width: 100%;
-        width: 95%;
-        padding: 10px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px;
         height: 50px;
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
-        overflow: hidden;
         .logo{
             #logo{
                 width: 25%;
@@ -48,6 +48,7 @@ body{
             justify-content: space-between;
             position: absolute;
             right: 0%;
+            padding-right: 10px;
             gap: 10px;
             a{
                 text-decoration: none;

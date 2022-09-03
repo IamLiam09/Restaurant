@@ -1,0 +1,39 @@
+#content{
+    .icon{
+        position: relative;
+        &__burger{
+            width: 25px;
+            height: 3px;
+            border: 5px;
+            background-color: black;
+            position: absolute;
+            top: 0.5rem;
+            right: 15%;
+            z-index: 5;
+            @include transition-ease;
+
+            &::after{
+                content: '';
+                width: 25px;
+                height: 3px;
+                border: 5px;
+                background-color: black;
+                position: absolute;
+                top: 8px;
+                z-index: 5;
+                @include transition-ease;
+            }
+            &::before{
+                content: '';
+                width: 25px;
+                height: 3px;
+                border: 5px;
+                background-color: black;
+                position: absolute;
+                top: -8px;
+                z-index: 5;
+                @include transition-ease;
+                }
+        }
+    }
+}

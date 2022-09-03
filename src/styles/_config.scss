@@ -7,6 +7,21 @@ html, *{
     padding: 0;
     box-sizing: border-box;
 }
-@mixin name {
-    
+@mixin transition-ease{
+    transition: all 0.5 ease-in-out;
+}
+@mixin media-tab {
+    @media screen and (max-width: 780px){
+        @content;
+    }
+}
+@mixin media-phone {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+@mixin media-large {
+    @media screen and (min-width: 1024px){
+        @content;
+    }
 }
