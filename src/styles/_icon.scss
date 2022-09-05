@@ -1,39 +1,28 @@
-#content{
-    .icon{
-        position: relative;
-        &__burger{
-            width: 25px;
-            height: 3px;
-            border: 5px;
-            background-color: black;
-            position: absolute;
-            top: 0.5rem;
-            right: 15%;
-            z-index: 5;
-            @include transition-ease;
-
-            &::after{
-                content: '';
-                width: 25px;
-                height: 3px;
-                border: 5px;
-                background-color: black;
-                position: absolute;
-                top: 8px;
-                z-index: 5;
-                @include transition-ease;
-            }
-            &::before{
-                content: '';
-                width: 25px;
-                height: 3px;
-                border: 5px;
-                background-color: black;
-                position: absolute;
-                top: -8px;
-                z-index: 5;
-                @include transition-ease;
-                }
-        }
-    }
-}
+// #content{
+   
+//     .icon{
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+//         width: 80vw;
+//         opacity: 0.98;
+//         visibility: hidden;
+//         &.open{
+//             visibility: visible;
+//         }
+//         .nav{
+//             display: flex;
+//             flex-direction: row;
+//             height: 100vh;
+//             justify-content: center;
+//             align-items: center;
+//             overflow: hidden;
+//             background-color: black;
+//             transform: translate(-100%);
+//             @include transition-ease;
+//             &.open{
+//                 transform: translateY(0)
+//             }
+//         }
+//     }
+// }   

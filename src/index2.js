@@ -35,6 +35,9 @@ const createdzigid2 = document.getElementById("createdzig2")
 const createdzigid3 = document.getElementById("createdzig3")
 const createdzigid4 = document.getElementById("createdzig4")
 const createdzigid5 = document.getElementById("createdzig5")
+const hamburger = document.getElementById("hambuger")
+const bugericon = document.querySelector("hambuger__burger")
+const icon = document.getElementById("icon")
 Barque_fish.src = fish
 burgerid.src = burger
 pieid.src = pie
@@ -56,3 +59,20 @@ createdzigid2.src = createdzig
 createdzigid3.src = createdzig
 createdzigid4.src = createdzig
 createdzigid5.src = createdzig
+var boo = false
+hamburger.addEventListener("click", open)
+function open(){
+    if(!boo){
+        burgeric.classList.add("open")
+        icon.classList.add("cover")
+        icon.style.visibility = "visible"
+        console.log(burger)
+        console.log(icon)
+        boo = true
+    }else{
+        burgeric.classList.remove("open")
+        icon.classList.remove("cover")
+        icon.style.visibility = "hidden"
+        boo = false
+    }
+}

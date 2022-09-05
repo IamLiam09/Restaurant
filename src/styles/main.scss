@@ -2,7 +2,7 @@
 @import "./config";
 @import "./catalog";
 @import "./responsive";
-@import "./icon";
+@import "./responsive";
 body{
     background: white;
     font-size: $main;
@@ -33,16 +33,7 @@ body{
         margin: 0 auto;
         padding: 5px;
         height: 50px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        .logo{
-            #logo{
-                width: 25%;
-                margin-left: 75px;
-                user-select: none;
-                pointer-events: none;
-            }
-        }
+        
         .icon{
             display: flex;
             justify-content: space-between;
@@ -169,6 +160,7 @@ body{
         position: absolute;
         padding: 5px;
         top: 25%;
+        z-index: 2;
         font-family: $fam;
         left: 7%;
         transform: tranlate(0, -50%);
@@ -187,6 +179,7 @@ body{
             height: 45px;
             width: 60%;
             margin-top: 4px;
+            text-transform: capitalize;
             color: white;
             background-color: #FFC440;
             font-size: $main;

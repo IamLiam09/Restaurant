@@ -5,13 +5,13 @@
     }
     .menu{
         height: 450vh;
-        overflow: hidden;
+        overflow-y: hidden;
         font-family: $fam;
         margin: 0 auto;
         margin-top: 40px !important;
         max-width: 1200px;
-        width: 100%;
-        
+        width: 95%;
+        scroll-behavior: smooth;
         span{
             color: $primary-color;
         }
