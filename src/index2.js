@@ -9,7 +9,6 @@ import jollofrice from "./assets/catalogimg/fried_rice_chicken.png";
 import popular from "./assets/catalogimg/clean_fried_rice.png"
 import comp from "./assets/catalogimg/about_comp.png"
 import chocolatecupcake from "./assets/catalogimg/chocolate_cupcake.png"
-import chickenslect from "./assets/chicken.png"
 import drink from "./assets/catalogimg/drink.png"
 import review from "./assets/catalogimg/review_cust.png"
 import complete_rice from "./assets/catalogimg/complete_rice.png"
@@ -36,8 +35,9 @@ const createdzigid3 = document.getElementById("createdzig3")
 const createdzigid4 = document.getElementById("createdzig4")
 const createdzigid5 = document.getElementById("createdzig5")
 const hamburger = document.getElementById("hambuger")
-const bugericon = document.querySelector("hambuger__burger")
+const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
+const swiper1 = document.getElementById("swiper1")
 Barque_fish.src = fish
 burgerid.src = burger
 pieid.src = pie
@@ -60,7 +60,85 @@ createdzigid3.src = createdzig
 createdzigid4.src = createdzig
 createdzigid5.src = createdzig
 var boo = false
+var init = false;
 hamburger.addEventListener("click", open)
+
+const swiper2 = new Swiper('.swiper2', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination2',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next2',
+      prevEl: '.swiper-button-prev2',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+const swiper3 = new Swiper('.swiper3', {
+    // Optional parameters
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination3',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next3',
+      prevEl: '.swiper-button-prev3',
+    },
+  
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  });
+  function swiperCard() {
+    if (window.innerWidth <= "768px") {
+      if (!init) {
+        init = true;
+        const swiper1 = new Swiper('.swiper1', {
+          // Optional parameters
+          loop: true,
+        
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination1',
+          },
+        
+          // Navigation arrows
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        
+          // And if we need scrollbar
+          // scrollbar: {
+          //   el: '.swiper-scrollbar',
+          // },
+        });
+      }
+    }if(init) {
+      swiper1.destroy();
+      init = false;
+      swiper1.classList.remove("swiper swiper1")
+    }
+  }
+  swiperCard();
+  window.addEventListener("load", function () {
+      swiperCard();
+    });
+  window.addEventListener("resize", swiperCard);
 function open(){
     if(!boo){
         burgeric.classList.add("open")

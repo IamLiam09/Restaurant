@@ -25,3 +25,6 @@ html, *{
         @content;
     }
 }
+@mixin flow($selec){
+    overflow: $selec;
+}

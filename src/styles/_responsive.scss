@@ -1,130 +1,141 @@
 @include media-tab{
+    #content{
+        html{
+            font-size: .8rem;
+        }
+        body{
+            // @include flow(hidden);
+            overflow: auto;
+        }
+        .bg__image{
+            display: none;
+        }
+        .plate{
+            position: fixed;
+            top: 50%;
+            left: 36%;
+            transform: translate(0, 50%);
+            &__image{
+                position: fixed;
+                bottom: -4%;
+                right: 0%;
+            }
+        }
+        .wording{
+            top: 20%;
+            transform: translate(0, -25%);
+            z-index: 3;
+        }
+        .socials{
+            color: $primary-color
+        }
+    }
     header{
         box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
-    }
-    html{
-        font-size: .8rem;
-    }
-    body{
-        overflow: hidden;
-    }
-    content{
-        position: relative;
-        height: 100vh;
-    }
-    .bg__image{
-        display: none;
-    }
-    .plate{
-        position: absolute;
-        top: 50%;
-        left: 36%;
-        transform: translate(0, 50%);
-        &__image{
-            position: relative;
-            bottom: -4%;
-            right: 0%;
-        }
-    }
-    .wording{
-        top: 20%;
-        transform: translate(0, -25%);
-        z-index: 3;
-    }
-    .socials{
-        color: $primary-color
     }
 }
 @include media-phone{
-    header{
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-        .icon{
-            visibility: hidden;
-            &.cover{
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center !important;
-                position: fixed;
-                top: 0;
-                right: 0;
-                left: 0;
-                gap: 15px;
-                z-index: 4;
-                font-size: 3rem;
-                background-color: rgba(0, 0, 0, 0.8);
-                height: 100vh;
-                width: 100vw;
-                transition: top 1s ease;
+    #content{
+        header{
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            .icon{
+                visibility: hidden;
+                &.cover{
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center !important;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    gap: 25px;
+                    z-index: 5;
+                    font-size: 3rem;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    height: 100vh;
+                    width: 100vw;
+                    transition: top 6s ease;
+                    .button{
+                        a{
+                            color: white !important;
+                        }
+                    }
+                }
             }
         }
-    }
-    html{
-        font-size: .7rem;
-    }
-    .socials{
-        display: none !important;
-    }
-    .hambuger{
-        position: absolute;
-        z-index: 6;
-        height: 25px;
-        width: 28px;
-        top: 1.5rem;
-        right: 1.5rem;
-        cursor: pointer;
-        @include transition-ease;
-        &__burger{
-            width: 25px;
-            height: 3px;
-            border: 5px;
-            background-color: black;
+        html{
+            font-size: .7rem;
+        }
+        .socials{
+            display: none !important;
+        }
+        .hambuger{
             position: absolute;
-            top: 0.5rem;
-            right: 0;
-            z-index: 6;
+            z-index: 9;
+            height: 25px;
+            width: 28px;
+            top: 1.5rem;
+            right: 1.5rem;
+            cursor: pointer;
             @include transition-ease;
-            &::after{
-                content: '';
+            &__burger{
                 width: 25px;
                 height: 3px;
                 border: 5px;
                 background-color: black;
                 position: absolute;
-                top: 8px;
+                top: 0.5rem;
+                right: 0;
+                z-index: 7;
                 @include transition-ease;
-            }
-            &::before{
-                content: '';
-                width: 25px;
-                height: 3px;
-                border: 5px;
-                background-color: black;
-                position: absolute;
-                top: -8px;
-                @include transition-ease;
-            }
-            &.open{
-                transform: rotate(360deg);
-                background: transparent;
-                &::before{
-                    transform: rotate(45deg) translate(5px, 8px)
-                }
                 &::after{
-                    width: 28px;
-                    transform: rotate(-45deg) translate(3px, -7px)
+                    content: '';
+                    width: 25px;
+                    height: 3px;
+                    border: 5px;
+                    background-color: black;
+                    position: absolute;
+                    top: 8px;
+                    @include transition-ease;
+                }
+                &::before{
+                    content: '';
+                    width: 25px;
+                    height: 3px;
+                    border: 5px;
+                    background-color: black;
+                    position: absolute;
+                    top: -8px;
+                    @include transition-ease;
+                }
+                &.open{
+                    transform: rotate(360deg);
+                    background: transparent;
+                    &::before{
+                        transform: rotate(45deg) translate(5px, 8px);
+                        background-color: black;
+                    }
+                    &::after{
+                        width: 28px;
+                        transform: rotate(-45deg) translate(3px, -7px);
+                        background-color: black;
+                    }
                 }
             }
         }
-    }
-    
-    .wording{
-        width: 200px;
-        padding: 3px;
-        &__booknow{
-            width: 20%;
+        
+        .wording{
+            width: 200px;
+            padding: 3px;
+            &__booknow{
+                width: 20%;
+            }
         }
     }
+    // catalog styling
+    
 }
+    

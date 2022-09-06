@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=0;">
     <title><%= htmlWebpackPlugin.options.title %></title>
     <script src="https://kit.fontawesome.com/04e6bbacd2.js" crossorigin="anonymous"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
+    
     <div id="content">
         <header>
             <div class="hambuger" id="hambuger">
-                <div class="hambuger__burger" id="burger"></div>
+                <div class="hambuger__burger" id="burgerham"></div>
             </div>
             <div class="icon" id="icon">
                     <div class="home button "><a href="index.html">Home</a></div>
                     <div class="button active"><a href="catalog.html">Catalog</a></div>
-                    <div class="contat button"><a href="contact.html">Contact</a></div>
+                    <div class="button"><a href="contact.html">Contact</a></div>
             </div>
         </header>
         <main class="menu">
@@ -36,30 +42,53 @@
                     </div>
                 </div>
                 <div class="foodselection">
-                    <div class="food_in_selection">
-                        <div class="cont">
-                            <img src="" alt="" id="pasteries">
+                    <!-- Slider main container -->
+                        <div class="swiper swiper1" id="swiper1">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="food_in_selection">
+                                    <div class="cont">
+                                        <img src="" alt="" id="pasteries">
+                                    </div>
+                                    <h3>Pasteries</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="food_in_selection">
+                                    <div class="cont">
+                                        <img src="" alt="" id="foreign">
+                                    </div>
+                                    <h3>Foreign</h6>
+                                </div>
+                            </div>
+                            <div class= "swiper-slide">
+                                <div class="food_in_selection">
+                                    <div class="cont">
+                                        <img src="" alt="" id="drinks">
+                                    </div>
+                                    <h3>Drinks</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="food_in_selection">
+                                    <div class="cont">
+                                        <img src="" alt="" id="local">
+                                    </div>
+                                    <h3>Local</h3>
+                                </div>
+                            </div>
                         </div>
-                        <h3>Pasteries</h6>
-                    </div>
-                    <div class="food_in_selection">
-                        <div class="cont">
-                            <img src="" alt="" id="foreign">
-                        </div>
-                        <h3>Foreign</h6>
-                    </div>
-                    <div class="food_in_selection">
-                        <div class="cont">
-                            <img src="" alt="" id="drinks">
-                        </div>
-                        <h3>Drinks</h6>
-                    </div>
-                    <div class="food_in_selection">
-                        <div class="cont">
-                            <img src="" alt="" id="local">
-                        </div>
-                        <h3>Local</h3>
-                    </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination swiper-pagination1"></div>
+                    
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    
+                        <!-- If we need scrollbar -->
+                    </div> 
                 </div>    
             </section>
             <section class="menu__bestseller">
@@ -69,79 +98,98 @@
                     <img src="" alt="">
                 </div>
                 <section class="menu__bestmenu">
-                        <div class="menu__bestmain">
-                            <div class="cont">
-                                <img src="" alt="" id="barbeque-fish">
+                        <!-- Slider main container -->
+                        <div class="swiper swiper2">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div class="menu__bestmain">
+                                        <div class="cont">
+                                            <img src="" alt="" id="barbeque-fish">
+                                        </div>
+                                        <h4>Barbeque Fish</h4>
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="pricing">
+                                            <h4>$10</h4>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__bestmain">
+                                        <div class="cont">
+                                            <img src="" alt="" id="burger">
+                                        </div>
+                                        <h4>Burger</h4>
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>                            
+                                        <div class="pricing">
+                                            <h4>$10</h4>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__bestmain">
+                                        <div class="cont">
+                                                <img src="" alt="" id="chicken">
+                                            </div>
+                                            <h4>Chicken</h4>
+                                            <div class="star">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            
+                                            <div class="pricing">
+                                                <h4>$10</h4>
+                                                <i></i>
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="menu__bestmain">
+                                        <div class="cont">
+                                            <img src="" alt="" id="pie">
+                                        </div>
+                                        <h4>Pie</h4>
+                                        <div class="star">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="pricing">
+                                            <h4>$10</h4>
+                                            <i></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <h4>Barbeque Fish</h4>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="pricing">
-                                <h4>$10</h4>
-                                <i></i>
-                            </div>
-                        </div>
-                        <div class="menu__bestmain">
-                            <div class="cont">
-                                <img src="" alt="" id="burger">
-                            </div>
-                            <h4>Burger</h4>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>                            
-                            <div class="pricing">
-                                <h4>$10</h4>
-                                <i></i>
-                            </div>
-                        </div>
-                    
-                        <div class="menu__bestmain">
-                            <div class="cont">
-                                <img src="" alt="" id="chicken">
-
-                            </div>
-                            <h4>Chicken</h4>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination swiper-pagination2"></div>
                             
-                            <div class="pricing">
-                                <h4>$10</h4>
-                                <i></i>
-                            </div>
+                            <!-- If we need navigation buttons -->
+                            <div class="swiper-button-prev swiper-button-prev2"></div>
+                            <div class="swiper-button-next swiper-button-next2"></div>
+                            
+                            <!-- If we need scrollbar -->
                         </div>
-                    
-                        <div class="menu__bestmain">
-                            <div class="cont">
-                                <img src="" alt="" id="pie">
-                            </div>
-                            <h4>Pie</h4>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="pricing">
-                                <h4>$10</h4>
-                                <i></i>
-                            </div>
-                        </div>
-                    
                 </section>
             </section>
             <section class="menu__newitems">
@@ -151,73 +199,96 @@
                     <img src="" alt="">
                 </div>
                 <section class="menu__newmenu">
-                    <div class="menu__newmain">
-                        <div class="cont">
-                            <img src="" alt="" id="egusi">
+                    <div class="swiper swiper3">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="menu__newmain">
+                                    <div class="cont">
+                                        <img src="" alt="" id="egusi">
+                                    </div>
+                                    <h4>Egusi</h4>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="pricing">
+                                        <h4>$10</h4>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__newmain">
+                                    <div class="cont">
+                                        <img src="" alt="" id="cupcake">
+                                    </div>
+                                    <h4>Jollof Rice</h4>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="pricing">
+                                        <h4>$10</h4>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__newmain">
+                                    <div class="cont">
+                                        <img src="" alt="" id="plaintain">
+                                    </div>
+                                    <h4>Plaintain</h4>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="pricing">
+                                        <h4>$10</h4>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="menu__newmain">
+                                    <div class="cont">
+                                        <img src="" alt="" id="jollof_rice">
+                                    </div>
+                                    <h4>Fried Rice</h4>
+                                    <div class="star">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="pricing">
+                                        <h4>$10</h4>
+                                        <i></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h4>Egusi</h4>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="pricing">
-                            <h4>$10</h4>
-                            <i></i>
-                        </div>
-                    </div>
-                    <div class="menu__newmain">
-                        <div class="cont">
-                            <img src="" alt="" id="cupcake">
-                        </div>
-                        <h4>Jollof Rice</h4>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="pricing">
-                            <h4>$10</h4>
-                            <i></i>
-                        </div>
-                    </div>
-                    <div class="menu__newmain">
-                        <div class="cont">
-                            <img src="" alt="" id="plaintain">
-                        </div>
-                        <h4>Plaintain</h4>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="pricing">
-                            <h4>$10</h4>
-                            <i></i>
-                        </div>
-                    </div>
-                    <div class="menu__newmain">
-                        <div class="cont">
-                            <img src="" alt="" id="jollof_rice">
-                        </div>
-                        <h4>Fried Rice</h4>
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="pricing">
-                            <h4>$10</h4>
-                            <i></i>
-                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination swiper-pagination3"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev swiper-button-prev3"></div>
+                        <div class="swiper-button-next swiper-button-next3"></div>
+                      
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar swiper-scrollbar3"></div>
                     </div>
                 </section>
             </section>

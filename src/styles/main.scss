@@ -3,6 +3,7 @@
 @import "./catalog";
 @import "./responsive";
 @import "./responsive";
+@import "./contact.scss";
 body{
     background: white;
     font-size: $main;
@@ -41,6 +42,7 @@ body{
             right: 0%;
             padding-right: 10px;
             gap: 10px;
+            cursor: pointer;
             a{
                 text-decoration: none;
                 padding: 10px;
@@ -106,7 +108,7 @@ body{
             height: 25%;
             position: absolute;
             top: 58%;
-            z-index: 4;
+            z-index: 2;
             left: 38%;
             transform: rotate(210deg);
             overflow: hidden;
