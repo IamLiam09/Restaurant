@@ -9,7 +9,7 @@ body{
     font-size: $main;
 }
 #content{
-    height: 95vh;
+    height: 100vh;
     max-width: 1200px;
     margin: 0 auto;
     #bgimage{
@@ -34,7 +34,6 @@ body{
         margin: 0 auto;
         padding: 5px;
         height: 50px;
-        
         .icon{
             display: flex;
             justify-content: space-between;

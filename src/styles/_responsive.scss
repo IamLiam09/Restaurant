@@ -30,20 +30,17 @@
             color: $primary-color
         }
     }
-    header{
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(10px);
-    }
 }
 @include media-phone{
+    html{
+        font-size: .7rem;
+    }
     #content{
         header{
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
             .icon{
                 visibility: hidden;
                 &.cover{
-                    display: none;
+                    display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center !important;
@@ -65,9 +62,6 @@
                     }
                 }
             }
-        }
-        html{
-            font-size: .7rem;
         }
         .socials{
             display: none !important;
@@ -134,8 +128,20 @@
                 width: 20%;
             }
         }
-    }
     // catalog styling
-    
+        .menu{
+            height: 450vh;
+            .review{
+                margin-bottom: 50px;
+                .details{
+                    .__imgcont{
+                        min-height: 80px;
+                        min-width: 150px;
+                    }
+                    gap: 5px;
+                }
+            }
+        }
+    }
 }
     

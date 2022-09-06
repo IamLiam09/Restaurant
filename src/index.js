@@ -14,6 +14,8 @@ const ziglines4img = document.getElementById("zigline__4")
 const hamburger = document.getElementById("hambuger")
 const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
+const body = document.querySelector("body")
+const content = document.getElementById("content")
 img.src = chicken
 bg.src = index2
 ziglinesimg.src = ziglines
@@ -22,6 +24,20 @@ ziglines3img.src = ziglines2
 ziglines4img.src = ziglines2
 var boo = false
 hamburger.addEventListener("click", open)
+window.addEventListener("scroll", standout)
+content.style.height = "100vh"
+// a function to add a few syle to make the header stand out
+function standout(){
+    let header = document.querySelector("header");
+    header.classList.toogle("extra", window.scrollY > 0)
+}
+function checker(){
+    if(content.style.height === "100vh"){
+        body.style.overflow = "hidden"
+    }else{
+        body.style.overflow = "auto"
+    }
+}
 function open(){
     if(!boo){
         burgeric.classList.add("open")
@@ -35,4 +51,6 @@ function open(){
         boo = false
     }
 }
+checker()
+
 

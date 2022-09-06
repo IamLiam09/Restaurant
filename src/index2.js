@@ -6,13 +6,13 @@ import pie from "./assets/catalogimg/pie.png";
 import egusi from "./assets/catalogimg/egusi.png";
 import  uglyplantain from "./assets/catalogimg/uglyplantain.png";
 import jollofrice from "./assets/catalogimg/fried_rice_chicken.png";
-import popular from "./assets/catalogimg/clean_fried_rice.png"
-import comp from "./assets/catalogimg/about_comp.png"
-import chocolatecupcake from "./assets/catalogimg/chocolate_cupcake.png"
-import drink from "./assets/catalogimg/drink.png"
-import review from "./assets/catalogimg/review_cust.png"
-import complete_rice from "./assets/catalogimg/complete_rice.png"
-import createdzig from "./assets/catalogimg/createdzig.png"
+import popular from "./assets/catalogimg/clean_fried_rice.png";
+import comp from "./assets/catalogimg/about_comp.png";
+import chocolatecupcake from "./assets/catalogimg/chocolate_cupcake.png";
+import drink from "./assets/catalogimg/drink.png";
+import review from "./assets/catalogimg/review_cust.png";
+import complete_rice from "./assets/catalogimg/complete_rice.png";
+import createdzig from "./assets/catalogimg/createdzig.png";
 const Barque_fish = document.getElementById("barbeque-fish")
 const burgerid = document.getElementById("burger")
 const  pieid = document.getElementById("pie")
@@ -37,7 +37,6 @@ const createdzigid5 = document.getElementById("createdzig5")
 const hamburger = document.getElementById("hambuger")
 const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
-const swiper1 = document.getElementById("swiper1")
 Barque_fish.src = fish
 burgerid.src = burger
 pieid.src = pie
@@ -154,3 +153,13 @@ function open(){
         boo = false
     }
 }
+window.addEventListener("scroll", function(){
+  let header = document.querySelector("header");
+  header.classList.toggle("extra", window.scrollY > 0)
+  console.log("working")
+})
+// function standout(){
+//   let header = document.querySelector("header");
+//   header.classList.toogle("extra", window.scrollY > 0)
+//   console.log("working")
+// }
