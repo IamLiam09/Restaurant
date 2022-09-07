@@ -129,16 +129,113 @@
             }
         }
     // catalog styling
+    // bottom up
         .menu{
-            height: 450vh;
+            height: 350vh;
             .review{
                 margin-bottom: 50px;
+                margin-top: 60px; 
                 .details{
+                    display: grid;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    right: -5%;
+                    transform: translate(10%, 15%);
                     .__imgcont{
                         min-height: 80px;
                         min-width: 150px;
                     }
-                    gap: 5px;
+                    &__writeup{
+                        min-height: 80px;
+                        min-width: 220px;
+                        margin-left: 2px;
+                    }
+                }
+            }
+            .article2{
+                &__details{
+                    display: grid;
+                    grid-template-columns: 1fr 0.4fr;
+                    .__imgcont{
+                        min-width: 80px;
+                        min-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        #about_comp{
+                            display: none
+                        }
+                        .square{
+                            width: 100px;
+                            height: 100px
+                        }
+                        .circle{
+                            width: 15px;
+                            height: 15px;
+                            border: 1.5px solid $primary-color;
+                        }
+                        .circle:nth-child(2){
+                            width: 15px;
+                            height: 15px;
+                            border: 1.5px solid $primary-color;
+                        }
+                        .circle:nth-child(3){
+                            width: 15px;
+                            height: 15px;
+                            border: 1.5px solid $primary-color;
+                        }
+                    }
+                    .__writeup{
+                        min-width: 130%;
+                        .wording__booknow{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            } 
+            .article{
+                margin-bottom: 0px;
+                &__details{
+                    display: grid;
+                    grid-template-columns: 0.4fr 1fr;
+                    .__imgcont{
+                        min-width: 80px;
+                        min-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        #popular_delicacies{
+                            display: block;
+                            height: 75%;
+                            width: 140%;
+                        }
+                        .square{
+                            width: 100px;
+                            height: 100px
+                        }
+                        .circle2{
+                            width: 15px;
+                            height: 15px;
+                            border: 1.5px solid $primary-color;
+                        }
+                    }
+                    .__writeup{
+                        min-width: 100%;
+                        font-size: 1.5rem;
+                        h2{
+                            font-size: 1.5rem;               
+                        }
+                        .fillercont{
+                            .fillerwords{
+                                font-size: 1.5rem;              
+                            }
+                        }
+                        
+                        .wording__booknow{
+                            font-size: 1.5rem;
+                        }
+                    }
                 }
             }
         }
