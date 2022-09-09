@@ -1,10 +1,10 @@
 import "./styles/main.scss";
 import index2 from "./assets/index2.png";
-import chicken from "./assets/chicken.png";
+import chick from "./assets/chicken.png";
 import  ziglines from "./assets/ziglines.jpg";
 import ziglines2 from "./assets/ziglines2.png";
 import created from "./assets/createdzig.png";
-const img = document.getElementById("plate")
+const plate = document.getElementById("plate")
 const bg = document.getElementById("bgimage")
 const ziglinesimg = document.getElementById("zigline__1")
 const ziglines2img = document.getElementById("zigline__2")
@@ -15,7 +15,7 @@ const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
 const body = document.querySelector("body")
 const content = document.getElementById("content")
-img.src = chicken
+plate.src = chick
 bg.src = index2
 ziglinesimg.src = ziglines
 ziglines2img.src = created
@@ -25,24 +25,11 @@ var boo = false
 hamburger.addEventListener("click", open)
 window.addEventListener("scroll", standout)
 // EventListner for the ripple effect for the links
-buttons.addEventListener("click", addripples(e))
 content.style.height = "100vh"
-const buttons = document.querySelectorAll("a")
 // a function to add a few syle to make the header stand out
 function standout(){
     let header = document.querySelector("header");
     header.classList.toggle("extra", window.scrollY > 0)
-}
-function addripples(e){
-    let x = e.clientX - e.target.offsetLeft;
-    let y = e.clientY - e.target.offsetright;
-    let ripples = documeent.createElement("span")
-    ripples.style.left = x + "px"
-    ripples.style.top = y + "px"
-    this.appendChild(ripples)
-    setTimeout(() => {
-        ripples.remove()
-    }, 1000)
 }
 function checker(){
     if(content.style.height === "100vh"){
@@ -65,5 +52,9 @@ function open(){
     }
 }
 checker()
-
-
+console.log(window.innerWidth)
+if(window.innerWidth > 750){
+    document.write("bable")
+    let head = document.querySelector("header")
+    head.classList.add("ingo")
+}

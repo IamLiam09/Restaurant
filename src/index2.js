@@ -13,7 +13,7 @@ import drink from "./assets/catalogimg/drink.png";
 import review from "./assets/catalogimg/review_cust.png";
 import complete_rice from "./assets/catalogimg/complete_rice.png";
 import createdzig from "./assets/catalogimg/createdzig.png";
-const Barque_fish = document.getElementById("barbeque-fish")
+const Barque = document.getElementById("barbeque-fish")
 const burgerid = document.getElementById("burger")
 const  pieid = document.getElementById("pie")
 const chickenid = document.getElementById("chicken")
@@ -37,7 +37,7 @@ const createdzigid5 = document.getElementById("createdzig5")
 const hamburger = document.getElementById("hambuger")
 const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
-Barque_fish.src = fish
+Barque.src = fish
 burgerid.src = burger
 pieid.src = pie
 chickenid.src = chickencat
@@ -58,86 +58,53 @@ createdzigid2.src = createdzig
 createdzigid3.src = createdzig
 createdzigid4.src = createdzig
 createdzigid5.src = createdzig
+const body = document.querySelector("body")
+const content = document.getElementById("content")
 var boo = false
 var init = false;
 hamburger.addEventListener("click", open)
 
-const swiper2 = new Swiper('.swiper2', {
-    // Optional parameters
-    loop: true,
+// const swiper2 = new Swiper('.swiper2', {
+//     // Optional parameters
+//     loop: true,
   
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination2',
-    },
+//     // If we need pagination
+//     pagination: {
+//       el: '.swiper-pagination2',
+//     },
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev2',
-    },
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: '.swiper-button-next2',
+//       prevEl: '.swiper-button-prev2',
+//     },
   
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-  });
-const swiper3 = new Swiper('.swiper3', {
-    // Optional parameters
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination3',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next3',
-      prevEl: '.swiper-button-prev3',
-    },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-  });
-  function swiperCard() {
-    if (window.innerWidth <= "768px") {
-      if (!init) {
-        init = true;
-        const swiper1 = new Swiper('.swiper1', {
-          // Optional parameters
-          loop: true,
+//     // And if we need scrollbar
+//     // scrollbar: {
+//     //   el: '.swiper-scrollbar',
+//     // },
+//   });
+
+  // const swiper1 = new Swiper('.swiper1', {
+  //         // Optional parameters
+  //         loop: true,
         
-          // If we need pagination
-          pagination: {
-            el: '.swiper-pagination1',
-          },
+  //         // If we need pagination
+  //         pagination: {
+  //           el: '.swiper-pagination1',
+  //         },
         
-          // Navigation arrows
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+  //         // Navigation arrows
+  //         navigation: {
+  //           nextEl: '.swiper-button-next',
+  //           prevEl: '.swiper-button-prev',
+  //         },
         
-          // And if we need scrollbar
-          // scrollbar: {
-          //   el: '.swiper-scrollbar',
-          // },
-        });
-      }
-    }if(init) {
-      swiper1.destroy();
-      init = false;
-      swiper1.classList.remove("swiper swiper1")
-    }
-  }
-  swiperCard();
-  window.addEventListener("load", function () {
-      swiperCard();
-    });
-  window.addEventListener("resize", swiperCard);
+  //         // And if we need scrollbar
+  //         // scrollbar: {
+  //         //   el: '.swiper-scrollbar',
+  //         // },
+  // });
 function open(){
     if(!boo){
         burgeric.classList.add("open")
@@ -156,10 +123,47 @@ function open(){
 window.addEventListener("scroll", function(){
   let header = document.querySelector("header");
   header.classList.toggle("extra", window.scrollY > 0)
-  console.log("working")
 })
-// function standout(){
-//   let header = document.querySelector("header");
-//   header.classList.toogle("extra", window.scrollY > 0)
-//   console.log("working")
-// }
+function checker(){
+  if(content.style.height === "100vh"){
+      body.style.overflow = "hidden"
+  }else{
+      body.style.overflow = "auto"
+  }
+}
+if(window.innerWidth > 750){
+  document.write("bable")
+  let head = document.querySelector("header")
+  head.classList.add("ingo")
+}
+var swiper3 
+var active = false
+window.addEventListener("resize", function(){
+  if(window.innerWidth < 780){
+    active = true
+    if(active){
+      swiper3 = new Swiper('.swiper3', {
+      // Optional parameters
+      loop: true,
+    
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination3',
+      },
+    
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next3',
+        prevEl: '.swiper-button-prev3',
+      },
+    
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: '.swiper-scrollbar',
+      // },
+    });
+    }else{
+      active = false;
+    }
+  }
+})
