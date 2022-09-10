@@ -31,7 +31,7 @@
             color: $primary-color
         }
         .menu{
-            height: 440vh;
+            height: 410vh;
             .review{
                 .details{
                     .__imgcont{
@@ -56,11 +56,11 @@
                             height: 70%;
                         }
                         .square{
-                            display: none;
+                            visibility: hidden;
                         }
                     }
                     .__writeup{
-                        min-width: 300px
+                        min-width: 300px;
                     }
                 }
             }
@@ -81,11 +81,41 @@
             }
             &__newitems{
                 .swiper{
-                    height: 150px;
-                    width: 300px;
+                    width: 280px;
+                    max-height: 320px;
                 }
-                .swiper-button-prev, .swiper-button-next{
+                .swiper-button-prev3, .swiper-button-next3{
                     visibility: visible;
+                }
+                .__newmain{
+                    max-width: 250px;
+                    max-height: 300x;
+                }
+            }
+            &__bestseller{
+                .__bestmain{
+                    max-width: 250px;
+                    max-height: 300px;
+                }
+                .swiper{
+                    width: 280px;
+                    max-height: 320px;
+                }
+                .swiper-button-prev2, .swiper-button-next2{
+                    visibility: visible !important;
+                }
+            }
+            .category{
+                .food_in_selection{
+                    max-width: 250px;
+                    max-height: 50px;
+                }
+                .swiper{
+                    width: 280px;
+                    max-height: 60px;
+                }
+                .swiper-button-prev1, .swiper-button-next1{
+                    visibility: visible !important;
                 }
             }
         }
@@ -191,7 +221,7 @@
     // catalog styling
     // bottom up
         .menu{
-            height: 350vh;
+            height: 330vh;
             .review{
                 margin-bottom: 50px;
                 margin-top: 60px; 
@@ -200,8 +230,8 @@
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    right: -5%;
-                    transform: translate(10%, 15%);
+                    right: -3%;
+                    transform: translate(10%, 10%);
                     .__imgcont{
                         min-height: 80px;
                         min-width: 150px;
@@ -272,7 +302,8 @@
                         }
                         .square{
                             width: 100px;
-                            height: 100px
+                            height: 100px;
+                            visibility: visible;
                         }
                         .circle2{
                             width: 15px;

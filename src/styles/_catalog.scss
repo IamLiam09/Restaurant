@@ -21,34 +21,58 @@
             color: $primary-color;
         }
         .delicacies{
-            display: flex;
-            justify-content: space-between;
-            &__icons{
-                display: none;
-                flex-direction: row;
-                gap: 10px;
-                margin-right: 60px;
-                margin-bottom : 10px;
-                .circle{
-                    border-radius: 50%;
-                    width: 30px;
-                    height: 30px;
-                    box-shadow: .5px .5px 3px .5px black;
+            .heading{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom : 15px;
+                .scrollers{
+                    position: relative;
+                    left: -2%;
+                    top: 0;
+                    overflow: hidden;
                     display: flex;
+                    width: 80px;
                     justify-content: center;
                     align-items: center;
+                    z-index: 2;
+                    .holder{
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;                    
+                        margin: 5px;
+                        &:focus{
+                            background-color: $primary-color;
+                        }
+                        &:hover{
+                            background-color: $primary-color;
+                        }
+                        .fa{
+                            visibility: visible;
+                            width: 15px;
+                            height: 15px;
+                            color: black;
+                            &:focus{
+                                color: white
+                            }
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
                 }
-                i{
-                    color: black;
-                }
+    
             }
+            
         }
         .category{
             .foodselection, .swiper-wrapper{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 text-align: center;
-                gap: 17px;
+                gap: 20px;
                 margin-bottom: 40px;
                 .food_in_selection{
                     width: 250px;
@@ -60,6 +84,7 @@
                     justify-items: center;
                     grid-template-columns: 0.6fr 2fr;
                     border-radius: 10px;
+                    margin: 5px;
                     h3{
                         justify-self: left;
                     }
@@ -75,7 +100,7 @@
                         }
                     }
                 }
-                .swiper-button-prev, .swiper-button-next{
+                .swiper-button-prev1, .swiper-button-next1{
                     visibility: hidden;
                 }
             }
@@ -95,6 +120,7 @@
                     grid-template-rows: 1fr 0.1fr 0.1fr 0.9fr;
                     border-radius: 10px;
                     text-align: left;
+                    margin: 5px;
                     .star{
                         padding-left: 5px;
                     }
@@ -117,6 +143,49 @@
                     visibility: hidden;
                 }
             }
+            .heading{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom : 15px;
+                .scrollers{
+                    position: relative;
+                    left: -2%;
+                    top: 0;
+                    overflow: hidden;
+                    display: flex;
+                    width: 80px;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2;
+                    .holder{
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;                    
+                        margin: 5px;
+                        &:focus{
+                            background-color: $primary-color;
+                        }
+                        &:hover{
+                            background-color: $primary-color;
+                        }
+                        .fa{
+                            visibility: visible;
+                            width: 15px;
+                            height: 15px;
+                            color: black;
+                            &:focus{
+                                color: white
+                            }
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
         }
         &__newitems{
             .__newmenu, .swiper-wrapper{
@@ -128,13 +197,14 @@
                 margin-bottom: 40px;
                 .__newmain{
                     width: 250px;
-                    max-height: 300px;
+                    height: 300px;
                     box-shadow: .5px .5px 3px .5px black;
                     display: grid;
                     align-items: center;
                     grid-template-rows: 1fr 0.1fr 0.8fr 0.1fr;
                     border-radius: 10px;
                     text-align: left;
+                    margin: 5px;
                     .star{
                         padding-left: 5px;
                     }
@@ -154,8 +224,49 @@
                     }
                 }
             }
-            .swiper-button-prev, .swiper-button-next{
-                visibility: hidden;
+            .heading{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom : 15px;
+                .scrollers{
+                    position: relative;
+                    left: -2%;
+                    top: 0;
+                    overflow: hidden;
+                    display: flex;
+                    width: 80px;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 2;
+                    .holder{
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;                    
+                        margin: 5px;
+                        &:focus{
+                            background-color: $primary-color;
+                        }
+                        &:hover{
+                            background-color: $primary-color;
+                        }
+                        .fa{
+                            visibility: visible;
+                            width: 15px;
+                            height: 15px;
+                            color: black;
+                            &:focus{
+                                color: white
+                            }
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+    
             }
         }
         .article{

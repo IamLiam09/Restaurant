@@ -64,47 +64,7 @@ var boo = false
 var init = false;
 hamburger.addEventListener("click", open)
 
-// const swiper2 = new Swiper('.swiper2', {
-//     // Optional parameters
-//     loop: true,
-  
-//     // If we need pagination
-//     pagination: {
-//       el: '.swiper-pagination2',
-//     },
-  
-//     // Navigation arrows
-//     navigation: {
-//       nextEl: '.swiper-button-next2',
-//       prevEl: '.swiper-button-prev2',
-//     },
-  
-//     // And if we need scrollbar
-//     // scrollbar: {
-//     //   el: '.swiper-scrollbar',
-//     // },
-//   });
 
-  // const swiper1 = new Swiper('.swiper1', {
-  //         // Optional parameters
-  //         loop: true,
-        
-  //         // If we need pagination
-  //         pagination: {
-  //           el: '.swiper-pagination1',
-  //         },
-        
-  //         // Navigation arrows
-  //         navigation: {
-  //           nextEl: '.swiper-button-next',
-  //           prevEl: '.swiper-button-prev',
-  //         },
-        
-  //         // And if we need scrollbar
-  //         // scrollbar: {
-  //         //   el: '.swiper-scrollbar',
-  //         // },
-  // });
 function open(){
     if(!boo){
         burgeric.classList.add("open")
@@ -136,31 +96,59 @@ if(window.innerWidth > 750){
   let head = document.querySelector("header")
   head.classList.add("ingo")
 }
-var swiper3 
+
 var active = false
+let prev3 = document.getElementById("prev3")
+let next3 = document.getElementById("next3")
 window.addEventListener("resize", function(){
   if(window.innerWidth < 780){
     active = true
     if(active){
-      swiper3 = new Swiper('.swiper3', {
-      // Optional parameters
-      loop: true,
+      
+      const swiper1 = new Swiper('.swiper1', {
+        // Optional parameters
+        loop: false,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination1',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next1',
+          prevEl: '.swiper-button-prev1',
+        },
+  
+      });
+      const swiper2 = new Swiper('.swiper2', {
+        // Optional parameters
+        loop: false,
+      
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination2',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next2',
+          prevEl: '.swiper-button-prev2',
+        },
+      });
+      const swiper3 = new Swiper('.swiper3', {
+        // Optional parameters
+        loop: false,
     
-      // If we need pagination
-      pagination: {
-        el: '.swiper-pagination3',
-      },
-    
-      // Navigation arrows
-      navigation: {
-        nextEl: '.swiper-button-next3',
-        prevEl: '.swiper-button-prev3',
-      },
-    
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
-      // },
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination3',
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: next3,
+          prevEl: prev3,
+        },
     });
     }else{
       active = false;
