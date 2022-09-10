@@ -84,12 +84,19 @@
                     width: 280px;
                     max-height: 320px;
                 }
-                .swiper-button-prev3, .swiper-button-next3{
-                    visibility: visible;
-                }
                 .__newmain{
                     max-width: 250px;
                     max-height: 300x;
+                }
+                .heading{ 
+                    .scrollers{
+                        .holder{
+                            visibility: visible;
+                            .fa{
+                                visibility: visible;
+                            }
+                        }
+                    }
                 }
             }
             &__bestseller{
@@ -101,8 +108,15 @@
                     width: 280px;
                     max-height: 320px;
                 }
-                .swiper-button-prev2, .swiper-button-next2{
-                    visibility: visible !important;
+                .heading{
+                    .scrollers{
+                        .holder{
+                            visibility: visible;
+                            .fa{
+                                visibility: visible;
+                            }
+                        }
+                    }
                 }
             }
             .category{
@@ -114,8 +128,15 @@
                     width: 280px;
                     max-height: 60px;
                 }
-                .swiper-button-prev1, .swiper-button-next1{
-                    visibility: visible !important;
+                .delicacies{
+                    .scrollers{
+                        .holder{
+                            visibility: visible;
+                            .fa{
+                                visibility: visible;
+                            }
+                        }
+                    }
                 }
             }
         }

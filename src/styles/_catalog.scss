@@ -43,6 +43,7 @@
                         justify-content: center;
                         border-radius: 50%;                    
                         margin: 5px;
+                        visibility: hidden;
                         &:focus{
                             background-color: $primary-color;
                         }
@@ -50,7 +51,7 @@
                             background-color: $primary-color;
                         }
                         .fa{
-                            visibility: visible;
+                            visibility: hidden;
                             width: 15px;
                             height: 15px;
                             color: black;
@@ -100,9 +101,6 @@
                         }
                     }
                 }
-                .swiper-button-prev1, .swiper-button-next1{
-                    visibility: hidden;
-                }
             }
         }
         &__bestseller{
@@ -139,9 +137,6 @@
                         border-radius: 10px 10px 0px 0px;
                     }
                 }
-                .swiper-button-prev, .swiper-button-next{
-                    visibility: hidden;
-                }
             }
             .heading{
                 display: flex;
@@ -165,6 +160,7 @@
                         justify-content: center;
                         border-radius: 50%;                    
                         margin: 5px;
+                        visibility: hidden;
                         &:focus{
                             background-color: $primary-color;
                         }
@@ -172,7 +168,7 @@
                             background-color: $primary-color;
                         }
                         .fa{
-                            visibility: visible;
+                            visibility: hidden;
                             width: 15px;
                             height: 15px;
                             color: black;
@@ -246,6 +242,7 @@
                         justify-content: center;
                         border-radius: 50%;                    
                         margin: 5px;
+                        visibility: hidden;
                         &:focus{
                             background-color: $primary-color;
                         }
@@ -253,7 +250,7 @@
                             background-color: $primary-color;
                         }
                         .fa{
-                            visibility: visible;
+                            visibility: hidden;
                             width: 15px;
                             height: 15px;
                             color: black;

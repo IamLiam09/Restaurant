@@ -14,7 +14,7 @@ const hamburger = document.getElementById("hambuger")
 const burgeric = document.querySelector(".hambuger__burger")
 const icon = document.getElementById("icon")
 const body = document.querySelector("body")
-const content = document.getElementById("content")
+let content = document.getElementById("content")
 plate.src = chick
 bg.src = index2
 ziglinesimg.src = ziglines
@@ -22,7 +22,45 @@ ziglines2img.src = created
 ziglines3img.src = ziglines2
 ziglines4img.src = ziglines2
 var boo = false
-hamburger.addEventListener("click", open)
+// The header html
+
+// The markup for the rest of the home page
+const addToHomepage = () => {
+    let homePageHtml = `<div class="">
+                            <img src="" alt="" class="bg__image" id="bgimage">
+                        </div>
+                        <div class="wording">
+                            <h1 class="wording__word">All Delicacies</h1>
+                            <h1 class="wording__african">African</h1>
+                            <p class="wording__list">Egba, fufu, egusi, Chicken</p>
+                            <button class="wording__booknow">book now</button>
+                        </div>
+                        <div class="ziglines">
+                            <img src="" alt="" class="ziglines__1" id="zigline__1">
+                            <img src="" alt="" class="ziglines__2" id="zigline__2">
+                            <img src="" alt="" class="ziglines__3" id="zigline__3">
+                            <img src="" alt="" class="ziglines__4" id="zigline__4">
+                            <div class="circle"></div>
+                            <div class="circle2"></div>
+                            <div class="circle3"></div>
+                        </div>
+                        <div class="plate">
+                            <img src="" class="plate__image" id="plate">
+                        </div>
+                        <div class="socials">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-instagram"></i>
+                            <i class="fa fa-facebook"></i>
+                        </div>`
+    content.innerHTML = homePageHtml
+}
+// Markup being added to the content
+const homepage = () => {
+   header()
+   addToHomepage()
+}
+document.onload = homepage()
+// hamburger.addEventListener("click", open)
 window.addEventListener("scroll", standout)
 // EventListner for the ripple effect for the links
 content.style.height = "100vh"

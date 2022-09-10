@@ -98,6 +98,10 @@ if(window.innerWidth > 750){
 }
 
 var active = false
+let prev1 = document.getElementById("prev1")
+let next1 = document.getElementById("next1")
+let prev2 = document.getElementById("prev2")
+let next2 = document.getElementById("next2")
 let prev3 = document.getElementById("prev3")
 let next3 = document.getElementById("next3")
 window.addEventListener("resize", function(){
@@ -116,8 +120,8 @@ window.addEventListener("resize", function(){
       
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next1',
-          prevEl: '.swiper-button-prev1',
+          nextEl: next1,
+          prevEl: prev1,
         },
   
       });
@@ -132,8 +136,8 @@ window.addEventListener("resize", function(){
       
         // Navigation arrows
         navigation: {
-          nextEl: '.swiper-button-next2',
-          prevEl: '.swiper-button-prev2',
+          nextEl: next2,
+          prevEl: prev2,
         },
       });
       const swiper3 = new Swiper('.swiper3', {
