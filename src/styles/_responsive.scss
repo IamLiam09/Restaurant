@@ -149,7 +149,12 @@
     #content{
         header{
             .icon{
-                visibility: hidden;
+                &.open{
+                    visibility: visible;
+                }
+                &.small{
+                    visibility: hidden;
+                }
                 &.cover{
                     display: flex;
                     flex-direction: column;

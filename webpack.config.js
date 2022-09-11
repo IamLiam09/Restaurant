@@ -4,8 +4,8 @@ module.exports = {
     mode: "development",
 	entry: {
 		home: path.resolve(__dirname, "src/index.js"),
-		catalog: path.resolve(__dirname, "src/index2.js"),
-		contact: path.resolve(__dirname, "src/index3.js"),
+		// catalog: path.resolve(__dirname, "src/index2.js"),
+		// contact: path.resolve(__dirname, "src/index3.js"),
 	},
 
 	output: {
@@ -50,15 +50,15 @@ module.exports = {
 			title: "Restaurant",
 			template: "./src/template.html",
 		}),
-		new HtmlWebpackPlugin({
-			filename: "catalog.html",
-			title: "Catalog",
-			template: "./src/template2.html",
-		}),
-		new HtmlWebpackPlugin({
-			filename: "contact.html",
-			title: "Contact",
-			template: "./src/template3.html",
-		}),
+		// new HtmlWebpackPlugin({
+		// 	filename: "catalog.html",
+		// 	title: "Catalog",
+		// 	template: "./src/template2.html",
+		// }),
+		// new HtmlWebpackPlugin({
+		// 	filename: "contact.html",
+		// 	title: "Contact",
+		// 	template: "./src/template3.html",
+		// }),
 	]
 };
