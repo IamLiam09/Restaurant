@@ -4,7 +4,7 @@ import firstpage from "./modules/homepage.js"
 import catalogHTML from "./modules/catalog.js"
 import contactHTML from "./modules/contact.js"
 import open from "./modules/hamburger.js"
-firstpage()
+catalogHTML()
 
 const general = () => {
     const home = document.querySelector(".Home")

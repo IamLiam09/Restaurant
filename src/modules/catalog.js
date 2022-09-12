@@ -29,7 +29,7 @@ const catalogHTMLBody = () => {
     let menu__heading = document.createElement("div")
     let foodselection = document.createElement("div")
     let wrapper = document.createElement("div")
-    let pasteries = document.createElement("img")
+    let cont = document.createElement("div")
     // Classes for the created Element
     main.classList.add("menu")
     section.classList.add("category")
@@ -39,8 +39,9 @@ const catalogHTMLBody = () => {
     foodselection.classList.add("swiper1")
     wrapper.classList.add("swiper-wrapper")
     // 
+    cont.classList.add("cont")
     pasteries.id = "pasteries"
-    pasteries.src = chocolatecupcake
+    cont.append(pasteries)
     // innerHTML
     menu__heading.innerHTML = ` 
                     <h2>Catalog Section</h2>
@@ -58,18 +59,41 @@ const catalogHTMLBody = () => {
                             </div>
                         </div>
                     </div>`
-    wrapper.innerHTML = `<div class="food_in_selection swiper-slide">
-                            <div class="cont">
-                                ${pasteries}
-                            </div>
-                            <h3>Pasteries</h6>
-                        </div>`
+    // objecs added to the foood in selection
+    const pasteries = new Food_in_selection("pasteries", chocolatecupcake, "Pasteries")
+    const foreign = new Food_in_selection("foreign", "Foreign")
+    const drinks = new Food_in_selection("drinks", "Drinks")
+    const local = new Food_in_selection("local", "Local")
     // appended
+    wrapper.append(pasteries)
+    wrapper.append(foreign)
+    wrapper.append(drinks)
+    wrapper.append(local)
     section.append(menu__heading)
     foodselection.append(wrapper)
     section.append(foodselection)
     main.append(section)
     content.append(main)
+}
+// food in selection objects
+function Food_in_selection(id, srcimg, desc){
+    this.id = id
+    this.srcimg = srcimg
+    this.desc = desc
+    let foodinselection = document.createElement("div")
+    let cont = document.createElement("div")
+    let img = document.createElement("img")
+    let tileName = document.createElement("h3")
+    foodinselection.classList.add("food_in_selection")
+    foodinselection.classList.add("swiper-slide")
+    cont.classList.add("cont")
+    img.id = this.id
+    img.src = this.srcimg
+    tileName.innerText = this.desc
+    cont.append(img)
+    foodinselection.append(cont)
+    foodinselection.append(tileName)
+    return foodinselection
 }
 const catalogHTML = () => {
     catalogHTMLHeader()
