@@ -3,10 +3,10 @@ import  ziglinesimg from "../assets/ziglines.jpg";
 import ziglines2img from "../assets/ziglines2.png";
 import created from "../assets/createdzig.png";
 import chick from "../assets/chicken.png";
-import headcomponent from "./head";
+import beingused from "./head.js";
 const firstpage = () => {
     // creating the element that would be added to the page
-    let heading = headcomponent()
+    let heading = beingused()
     let content = document.querySelector("#content")
     let bgimg = document.createElement("img")
     let wording = document.createElement("div")

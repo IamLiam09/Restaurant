@@ -8,8 +8,6 @@ function open(){
         if(boo){
             burgeric.classList.toggle("open")
             icon.classList.toggle("cover")
-            icon.classList.toggle("open")
-            icon.classList.remove("small")
             boo = false
         }
     }

@@ -1,3 +1,5 @@
+
+// header component
 const headcomponent = () => {
     let header = document.createElement("header")
         // Heading innerHTML
@@ -12,4 +14,6 @@ const headcomponent = () => {
                     </div>`
     return header
 }
+// An event Listner for all
+// combined to one function to be used
 export default headcomponent

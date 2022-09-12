@@ -149,12 +149,7 @@
     #content{
         header{
             .icon{
-                &.open{
-                    visibility: visible;
-                }
-                &.small{
-                    visibility: hidden;
-                }
+                visibility: hidden;
                 &.cover{
                     display: flex;
                     flex-direction: column;
@@ -170,6 +165,7 @@
                     background-color: rgba(0, 0, 0, 0.8);
                     height: 100vh;
                     width: 100vw;
+                    visibility: visible;
                     transition: top 6s ease;
                     .button{
                         a{
