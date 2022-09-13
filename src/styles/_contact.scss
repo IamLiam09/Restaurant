@@ -18,6 +18,19 @@
             h1{
                 color: $primary-color;
             }
+            .socials{
+                position: absolute;
+                background-color: transparent;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                i{
+                    color: $primary-color
+                }
+            }
         }
     }
 }

@@ -21,6 +21,11 @@ const contactHTMLBody = () => {
                             <h4>Open hours: 8AM-9PM</h4>
                             <h4>Call us: 09123917499</h4>
                             <h4>8 street, san franciso, california</h4>
+                            <div class="socials">
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-facebook"></i>
+                            </div>
                         </div>`
     content.append(section)
 }

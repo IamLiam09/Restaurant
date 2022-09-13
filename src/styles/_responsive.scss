@@ -156,7 +156,7 @@
             position: absolute;
             height: 200px !important;
             width: 200px !important;
-            left: 29%;
+            left: 32%;
             transform: translateX(0);
             transform: translateY(150%);
         }
@@ -370,6 +370,13 @@
                             font-size: 1.1rem;
                         }
                     }
+                }
+            }
+        }
+        .contact{
+            .consquare{
+                .socials{
+                    display: flex !important;
                 }
             }
         }

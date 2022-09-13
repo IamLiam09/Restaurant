@@ -400,7 +400,7 @@ const reviewcata = () => {
     star.classList.add("star")
     section.classList.add("review")
     // innerHTML
-    h2.innerHTML = `<span class="yellowtext">Review</span> of our client`
+    h2.innerHTML = `<span class="yellowtext">Review</span> from our client`
     star.innerHTML = `<i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
