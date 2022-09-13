@@ -71,14 +71,10 @@ const firstpage = () => {
     div.append(bgimg) 
     content.append(heading, div, wording, ziglines, plate, socials)
     // Checker for the width of the screen
-    content.style.height = "100%"
-    function checker(){
-        if(content.style.height === "100%"){
-            body.style.overflow = "hidden"
-        }
-    }
-    checker()
     window.addEventListener("Load", general())
+    // body.style.overflow = "hidden"
+    // content.style.overflow = "hidden"
+
 }
 const general = () => {
     const contact = document.querySelector(".Contact")
@@ -93,6 +89,13 @@ const general = () => {
         clearHTML()
         contactHTML()
     })
+}
+const checker = () => {
+    const content = document.querySelector("#content")
+    if(window.innerWidth < 400){
+        content.style.owerflow = "hidden"
+        console.log("in")
+    }
 }
 // window Event Listeners
 export default firstpage

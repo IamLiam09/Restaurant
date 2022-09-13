@@ -1,8 +1,9 @@
 // I used bottom to top for the css. While the HTML is top to bottom
 @include media-tab{
     #content{
+        position: relative;
         html{
-            font-size: .8rem;
+            font-size: .6rem;
         }
         body{
             // @include flow(hidden);
@@ -12,17 +13,21 @@
             display: none;
         }
         .plate{
-            position: fixed;
-            top: 50%;
-            left: 36%;
-            transform: translate(0, 50%);
+            position: absolute;
+            top: 55%;
+            left: 56%;
+            transform: translateY(100%);
+            max-width: 200px !important;
+            max-height: 200px !important;
             &__image{
-                position: fixed;
-                bottom: -4%;
+                position: absolute;
+                bottom: -2%;
                 right: 0%;
             }
         }
         .wording{
+            width: 300px;
+            font-size: 1rem;
             top: 20%;
             transform: translate(0, -25%);
             z-index: 3;
@@ -31,7 +36,7 @@
             color: $primary-color
         }
         .menu{
-            height: 400vh;
+            height: 420vh;
             .review{
                 .details{
                     .__imgcont{
@@ -143,10 +148,18 @@
     }
 }
 @include media-phone{
-    html{
+    html, body{
         font-size: .7rem;
     }
     #content{
+        .plate{
+            position: absolute;
+            height: 200px !important;
+            width: 200px !important;
+            left: 25%;
+            transform: translateX(0);
+            transform: translateY(140%);
+        }
         header{
             .icon{
                 visibility: hidden;
@@ -174,6 +187,12 @@
                     }
                 }
             }
+        .wording{
+            position: absolute;
+            top: 10%;
+            width: 350px;
+            height: 240px;
+        }
         }
         .socials{
             display: none !important;
@@ -183,8 +202,8 @@
             z-index: 9;
             height: 25px;
             width: 28px;
-            top: 1.5rem;
-            right: 1.5rem;
+            top: 15px;
+            right: 15px;
             cursor: pointer;
             @include transition-ease;
             &__burger{
@@ -243,7 +262,7 @@
     // catalog styling
     // bottom up
         .menu{
-            height: 320vh;
+            height: 340vh;
             .review{
                 margin-bottom: 50px;
                 margin-top: 60px; 
@@ -299,7 +318,7 @@
                         }
                     }
                     .__writeup{
-                        min-width: 130%;
+                        min-width: 110%;
                         .wording__booknow{
                             font-size: 1.5rem;
                         }
@@ -334,14 +353,14 @@
                         }
                     }
                     .__writeup{
-                        min-width: 100%;
+                        min-width: 80%;
                         font-size: 1.5rem;
                         h2{
                             font-size: 1.5rem;               
                         }
                         .fillercont{
                             .fillerwords{
-                                font-size: 1.5rem;              
+                                font-size: 1.3rem;              
                             }
                         }
                         

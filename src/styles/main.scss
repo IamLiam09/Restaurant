@@ -155,22 +155,26 @@ body{
         top: 4%;
         overflow: hidden;
         z-index: -1;
-        width: 550px;
-        height: 550px;
+        max-width: 550px;
+        max-height: 550px;
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         border: 1px solid $primary-color;
         user-select: none;
         pointer-events: none;
         &__image{
             position: relative;
+            object-fit: contain;
             right: 15%;
             height: 80%;
+            width: 100%;
             filter: drop-shadow(1px 1px 3px black)
         }
     }
     .wording{
-        width: 500px;
-        height: 300px;
+        max-width: 500px;
+        max-height: 300px;
         display: grid;
         grid-template-rows: 0.1fr 0.1fr 0.1fr 0.8fr;
         position: absolute;
