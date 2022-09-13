@@ -20,7 +20,7 @@ const contactHTMLBody = () => {
                             <h1>Contact us</h1>
                             <h4>Open hours: 8AM-9PM</h4>
                             <h4>Call us: 09123917499</h4>
-                            <h4>8 street, xxxvid, san franciso, california</h4>
+                            <h4>8 street, san franciso, california</h4>
                         </div>`
     content.append(section)
 }
