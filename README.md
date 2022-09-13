@@ -1,6 +1,7 @@
 # Restaurant Page
-### Preview
 <!-- Adding a image here -->
+## Preview
+![Mobile Preview](./src/assets/Mobileview.PNG)
 ## Technologies used
 * Webpack
 * HTML
@@ -13,4 +14,5 @@
 * Used Scss which was easy to get the hang of because of it's similarity to CSS. Used both mixins and include and other SCSS properties to achieve the Design.
 * DOM Manupulation
 * Made a caoursel for both the tablet and mobile using swiper js
+[Live Preview](www.afrirokitchen.netlify.app)
 

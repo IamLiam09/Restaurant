@@ -48,6 +48,7 @@ module.exports = {
 			filename: "index.html",
 			title: "Restaurant",
 			template: "./src/template.html",
+			favicon: "./src/assets/favicon.png"	
 		}),
 	]
 };

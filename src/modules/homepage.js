@@ -71,13 +71,10 @@ const firstpage = () => {
     div.append(bgimg) 
     content.append(heading, div, wording, ziglines, plate, socials)
     // Checker for the width of the screen
-    content.style.height = "100vh"
+    content.style.height = "100%"
     function checker(){
-        if(content.style.height === "100vh"){
-            content.style.height = "100vh"
+        if(content.style.height === "100%"){
             body.style.overflow = "hidden"
-        }else{
-            body.style.overflow = "auto"
         }
     }
     checker()
