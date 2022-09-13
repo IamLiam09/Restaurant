@@ -4,6 +4,10 @@ import ziglines2img from "../assets/ziglines2.png";
 import created from "../assets/createdzig.png";
 import chick from "../assets/chicken.png";
 import beingused from "./head.js";
+import open from "./hamburger.js"
+import clearHTML from "./clear.js"
+import catalogHTML from "./catalog.js"
+import contactHTML from "./contact.js"
 const firstpage = () => {
     // creating the element that would be added to the page
     let heading = beingused()
@@ -77,5 +81,21 @@ const firstpage = () => {
         }
     }
     checker()
+    window.addEventListener("Load", general())
 }
+const general = () => {
+    const contact = document.querySelector(".Contact")
+    const catalog = document.querySelector(".Catalog")
+    const hamburger = document.getElementById("hambuger")
+    hamburger.addEventListener("click", open)
+    catalog.addEventListener("click", () => {
+        clearHTML()
+        catalogHTML()
+    })
+    contact.addEventListener("click", () =>{
+        clearHTML()
+        contactHTML()
+    })
+}
+// window Event Listeners
 export default firstpage

@@ -1,11 +1,9 @@
 import "./styles/main.scss";
 import clearHTML from "./modules/clear.js"
 import firstpage from "./modules/homepage.js"
-import catalogHTML from "./modules/catalog.js"
 import contactHTML from "./modules/contact.js"
+import catalogHTML from "./modules/catalog.js"
 import open from "./modules/hamburger.js"
-catalogHTML()
-
 const general = () => {
     const home = document.querySelector(".Home")
     const catalog = document.querySelector(".Catalog")
@@ -16,20 +14,15 @@ const general = () => {
     home.addEventListener("click", () => {
         clearHTML()
         firstpage()
-        console.log("first")
     })
     catalog.addEventListener("click", () => {
         clearHTML()
         catalogHTML()
-        console.log("second")
     })
     contact.addEventListener("click", () =>{
         clearHTML()
         contactHTML()
-        console.log("Third")
     })
-    if(icon.style.visibility === "visible" && icon.classList.contain(!"open")){
-        icon.style.visibility = "hidden"
-    }
 }
+firstpage()
 general()

@@ -97,14 +97,14 @@ if(window.innerWidth > 750){
   head.classList.add("ingo")
 }
 
-var active = false
-let prev1 = document.getElementById("prev1")
-let next1 = document.getElementById("next1")
-let prev2 = document.getElementById("prev2")
-let next2 = document.getElementById("next2")
-let prev3 = document.getElementById("prev3")
-let next3 = document.getElementById("next3")
 window.addEventListener("resize", function(){
+  var active = false
+  let prev1 = document.getElementById("prev1")
+  let next1 = document.getElementById("next1")
+  let prev2 = document.getElementById("prev2")
+  let next2 = document.getElementById("next2")
+  let prev3 = document.getElementById("prev3")
+  let next3 = document.getElementById("next3")
   if(window.innerWidth < 780){
     active = true
     if(active){

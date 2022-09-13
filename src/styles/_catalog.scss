@@ -1,6 +1,5 @@
 
 #content{
-    height: 450vh;
     header{
         position: fixed;
         top: 0 !important;
@@ -10,6 +9,7 @@
         }
     }
     .menu{
+        height: 440vh;
         overflow: hidden;
         font-family: $fam;
         margin: 0 auto;
@@ -64,7 +64,6 @@
                         }
                     }
                 }
-    
             }
             
         }
@@ -320,6 +319,7 @@
                         height: 100%;
                         object-fit: cover;
                         border-radius: 1px 50px 0px 50px;
+                        display: inline;
                     }
                 }
                 .__writeup{

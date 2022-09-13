@@ -1,5 +1,8 @@
-import clearHTML from "./clear";
+import clearHTML from "./clear.js";
 import beingused from "./head.js";
+import open from "./hamburger.js"
+import firstpage from "./homepage.js"
+import catalogHTML from "./catalog.js"
 const contactHTMLHeader = () => {
     let heading = beingused()
     let content = document.querySelector("#content")
@@ -21,8 +24,25 @@ const contactHTMLBody = () => {
                         </div>`
     content.append(section)
 }
+const general = () => {
+    const home = document.querySelector(".Home")
+    const catalog = document.querySelector(".Catalog")
+    const contact = document.querySelector(".Contact")
+    const hamburger = document.getElementById("hambuger")
+    const icon = document.getElementById("icon")
+    hamburger.addEventListener("click", open)
+    home.addEventListener("click", () => {
+        clearHTML()
+        firstpage()
+    })
+    catalog.addEventListener("click", () => {
+        clearHTML()
+        catalogHTML()
+    })
+}
 const contactHTML = () => {
     contactHTMLHeader()
     contactHTMLBody()
+    window.addEventListener("Load", general())
 }
 export default contactHTML

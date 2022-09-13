@@ -1,4 +1,10 @@
 import beingused from "./head.js";
+import open from "./hamburger.js"
+// additional feature imports
+import clearHTML from "./clear.js"
+import firstpage from "./homepage.js"
+import contactHTML from "./contact.js"
+// images import
 import fish from "../assets/catalogimg/Barque_fish.png";
 import burger from "../assets/catalogimg/burger.png";
 import  chickencat from "../assets/catalogimg/complete_chicken.png";
@@ -133,6 +139,7 @@ const catalogHTMLBody = () => {
     main.append(reviewdiv)
     // content append
     content.append(main)
+    window.addEventListener("Load", carosel())
 }
 // food in selection objects
 function Food_in_selection(id, srcimg, desc){
@@ -250,7 +257,7 @@ const article1 = () => {
     const imgdiv = new imgCont(createdzig, createdzig, popular)
     writeup.classList.add("__writeup")
     writeupimg.id = "createdzig2"
-    writeupimg.class = "createdzig"
+    writeupimg.classList.add("createdzig")
     writeupimg.src = createdzig
     writeh2.innerText = "Fried rice & chicken"
     fillercont.classList.add("fillercont")
@@ -262,7 +269,6 @@ const article1 = () => {
     p.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ducimus, commodi velit quas error in vero dolorem culpa obcaecati atque porro exercitationem. Earum id at reprehenderit non asperiores, quaerat labore tempore fuga necessitatibus expedita recusandae tempora facilis dicta, quo repudiandae sint nam tenetur ad, sequi quis? Aliquid alias excepturi iusto omnis voluptates nisi dolore natus."
     button.classList.add("wording__booknow")
     button.innerText = "Read completely"
-    console.log(imgdiv)
     writeup.append(writeupimg)
     writeup.append(writeh2)
     writeup.append(fillercont)
@@ -271,6 +277,7 @@ const article1 = () => {
     insection.append(imgdiv)
     insection.append(writeup)
     section.append(insection)
+    // a function for the img
     function imgCont(img1, img2, img3){
         this.img1 = img1
         this.img2 = img2
@@ -293,7 +300,7 @@ const article1 = () => {
         img3div.src = this.img3
         // classes
         img1div.classList.add("createdzig")
-        img2div.classList.add("createdzig1")
+        img2div.classList.add("createdzig")
         div1.classList.add("circle")
         div2.classList.add("circle2")
         // appending them the div container
@@ -307,51 +314,209 @@ const article1 = () => {
     return section
                 }
 const article2 = () => {
+    // created element for article 2
     const section  = document.createElement("section")
+    const innersection = document.createElement("setion")
+    const writeup = document.createElement("div")
+    // classes
+    innersection.classList.add("article2__details")
+    writeup.classList.add("__writeup")
     section.classList.add("article2")
-    section.innerHTML = `
-                <section class="article2__details">
-                    <div class="__writeup">
-                        <h2><span class="yellowtext">About</span> company</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore expedita vero quo aut aliquid quia minus, iste nemo perferendis odio repellat ab cumque, atque in fugiat quaerat, hic qui provident ad possimus error quasi eos laborum. Repellat, expedita nisi! Natus tenetur dolorum maiores blanditiis obcaecati numquam, perspiciatis inventore autem aspernatur veniam modi consequatur repellendus nihil.</p>
-                        <button class="wording__booknow">Read completely</button>
-                    </div>
-                    <div class="__imgcont">
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                        <div class="circle"></div>
-                        <div class="square"></div>
-                        <img src="" id="createdzig3" class="createdzig">
-                        <img src="" id="createdzig4" class="createdzig">
-                        <img src="" id="createdzig5" class="createdzig">
-                        <img src="" alt="" id="about_comp"></div>
-                </section>`
+    // innerHTML for writeup
+    writeup.innerHTML = `
+                    <h2><span class="yellowtext">About</span> company</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore expedita vero quo aut aliquid quia minus, iste nemo perferendis odio repellat ab cumque, atque in fugiat quaerat, hic qui provident ad possimus error quasi eos laborum. Repellat, expedita nisi! Natus tenetur dolorum maiores blanditiis obcaecati numquam, perspiciatis inventore autem aspernatur veniam modi consequatur repellendus nihil.</p>
+                    <button class="wording__booknow">Read completely</button>
+`
+    // var
+    const img = new imgCont(createdzig, createdzig, createdzig, comp)
+    // appends
+    innersection.append(writeup)
+    innersection.append(img)
+    section.append(innersection)
+    function imgCont(img1, img2, img3, img4){
+        this.img1 = img1
+        this.img2 = img2
+        this.img3 = img3
+        this.img4 = img4
+        // created element
+        const imgcont = document.createElement("div")
+        const img1div = document.createElement("img")
+        const img2div = document.createElement("img")
+        const img3div = document.createElement("img")
+        const img4div = document.createElement("img")
+        const div1 = document.createElement("div")
+        const div2 = document.createElement("div")
+        const div3 = document.createElement("div")
+        // The square div
+        const square = document.createElement("div")
+        imgcont.classList.add("__imgcont")
+        // img id
+        img1div.id = "createdzig3"
+        img2div.id = "createdzig4"
+        img3div.id = "createdzig5"
+        img4div.id = "about_comp"
+        // img src
+        img1div.src = this.img1
+        img2div.src = this.img2
+        img3div.src = this.img3
+        img4div.src = this.img4
+        // classes
+        img1div.classList.add("createdzig")
+        img2div.classList.add("createdzig")
+        img3div.classList.add("createdzig")
+        div1.classList.add("circle")
+        div2.classList.add("circle")
+        div3.classList.add("circle")
+        square.classList.add("square")
+        // appending them the div container
+        imgcont.append(div1)
+        imgcont.append(div2)
+        imgcont.append(div3)
+        imgcont.append(square)
+        imgcont.append(img1div)
+        imgcont.append(img2div)
+        imgcont.append(img3div)
+        imgcont.append(img4div)
+        return imgcont
+    }
     return section
 }
 const reviewcata = () => {
+    // create
     const section  = document.createElement("section")
+    const h2 = document.createElement("h2")
+    const details = document.createElement("section")
+    const imgcont = document.createElement("div")
+    const img = document.createElement("img")
+    const writeup = document.createElement("div")
+    const h3inside = document.createElement("h3")
+    const star = document.createElement("div")
+    const p = document.createElement("p")
+    // classes
+    details.classList.add("details")
+    imgcont.classList.add("__imgcont")
+    writeup.classList.add("details__writeup")
+    star.classList.add("star")
     section.classList.add("review")
-    section.innerHTML = `
-                <h2><span class="yellowtext">Review</span> of our client</h4>
-                <section class="details">
-                    <div class="__imgcont"><img src="" alt="" id="reviewimg"></div>
-                    <div class="details__writeup">
-                        <h3>Mike</h3>  
-                        <div class="star">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptates distinctio ducimus eos consectetur. Dignissimos corrupti atque hic eum, at ea, veritatis exercitationem officiis laborum ab nesciunt culpa natus nisi.</p>         
-                    </div>
-                </section>`
+    // innerHTML
+    h2.innerHTML = `<span class="yellowtext">Review</span> of our client`
+    star.innerHTML = `<i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>`
+    // innerText
+    h3inside.innerText = "Mike"
+    p.innerText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptates distinctio ducimus eos consectetur. Dignissimos corrupti atque hic eum, at ea, veritatis exercitationem officiis laborum ab nesciunt culpa natus nisi."
+    // img src & id 
+    img.id = "reviewimg"
+    img.src = review
+    // appends
+    writeup.append(h3inside)
+    writeup.append(star)
+    writeup.append(p)
+    imgcont.append(img)
+    details.append(imgcont)
+    details.append(writeup)
+    section.append(h2)
+    section.append(details)
     return section
 }
-
+// important features
+window.addEventListener("scroll", function(){
+    let header = document.querySelector("header");
+    header.classList.toggle("extra", window.scrollY > 0)
+})
+// carousel
+var active = false
+const carosel = () => {
+    if(window.innerWidth < 780){
+        let prev1 = document.getElementById("prev1")
+        let next1 = document.getElementById("next1")
+        let prev2 = document.getElementById("prev2")
+        let next2 = document.getElementById("next2")
+        let prev3 = document.getElementById("prev3")
+        let next3 = document.getElementById("next3")
+      active = true
+      if(active){
+        const swiper1 = new Swiper('.swiper1', {
+          // Optional parameters
+          loop: false,
+        
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination1',
+          },
+        
+          // Navigation arrows
+          navigation: {
+            nextEl: next1,
+            prevEl: prev1,
+          },
+    
+        });
+        const swiper2 = new Swiper('.swiper2', {
+          // Optional parameters
+          loop: false,
+        
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination2',
+          },
+        
+          // Navigation arrows
+          navigation: {
+            nextEl: next2,
+            prevEl: prev2,
+          },
+        });
+        const swiper3 = new Swiper('.swiper3', {
+          // Optional parameters
+          loop: false,
+      
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination3',
+          },
+          // Navigation arrows
+          navigation: {
+            nextEl: next3,
+            prevEl: prev3,
+          },
+      });
+      }else{
+        active = false;
+      }
+    }
+}
+// additional feature
+const general = () => {
+    const home = document.querySelector(".Home")
+    const contact = document.querySelector(".Contact")
+    const hamburger = document.getElementById("hambuger")
+    hamburger.addEventListener("click", open)
+    home.addEventListener("click", () => {
+        clearHTML()
+        firstpage()
+    })
+    contact.addEventListener("click", () =>{
+        clearHTML()
+        contactHTML()
+    })
+}
+const reset = () => {
+    const body = document.querySelector("body")
+    body.style.overflow = "visible"
+}
+// window Event Listener
+window.addEventListener("resize", function(){
+    carosel()
+  })
 const catalogHTML = () => {
     catalogHTMLHeader()
     catalogHTMLBody()
+    reset()
+    window.addEventListener("Load", general())
 }
 export default catalogHTML
