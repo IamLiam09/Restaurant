@@ -90,12 +90,6 @@ const general = () => {
         contactHTML()
     })
 }
-const checker = () => {
-    const content = document.querySelector("#content")
-    if(window.innerWidth < 400){
-        content.style.owerflow = "hidden"
-        console.log("in")
-    }
-}
+
 // window Event Listeners
 export default firstpage

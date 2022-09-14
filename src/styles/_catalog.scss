@@ -9,7 +9,6 @@
         }
     }
     .menu{
-        height: 440vh;
         overflow: hidden;
         font-family: $fam;
         margin: 0 auto;
@@ -470,8 +469,8 @@
             
         }
         .review{
-            margin-top: 250px;
-            margin-bottom: 50px;
+            margin-top: 200px;
+            margin-bottom: 200px !important;
             .details{
                 display: grid;
                 grid-template-columns: .3fr 1fr;

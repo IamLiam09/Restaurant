@@ -516,7 +516,6 @@ window.addEventListener("resize", function(){
 const catalogHTML = () => {
     catalogHTMLHeader()
     catalogHTMLBody()
-    reset()
     window.addEventListener("Load", general())
 }
 export default catalogHTML
